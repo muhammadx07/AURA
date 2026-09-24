@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AURA — Элитные швейцарские часы</title>
+  
+  <!-- Шрифты -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600;700&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  
+  <!-- Иконки FontAwesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  
+  <!-- Таблица стилей -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Навигация -->
+  <nav class="navbar">
+    <div class="logo">AURA<span>.</span></div>
+    
+    <div class="nav-links">
+      <a href="#catalog">Каталог</a>
+      <a href="#about">О бренде</a>
+      <a href="#contact">Контакты</a>
+    </div>
+
+    <div class="nav-icons">
+      <div class="icon-btn" id="wishlistBtn">
+        <i class="fa-regular fa-heart"></i>
+        <span class="badge" id="wishlistCount">0</span>
+      </div>
+      <div class="icon-btn" id="cartBtn">
+        <i class="fa-solid fa-bag-shopping"></i>
+        <span class="badge" id="cartCount">0</span>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Первый экран (Hero) -->
+  <header class="hero">
+    <div class="hero-overlay"></div>
+    <div class="hero-content">
+      <span class="hero-subtitle">Швейцарское совершенство</span>
+      <h1>Время в вашей безупречной власти</h1>
+      <p>Искусство часового дела, воплощенное в благородном изумрудном исполнении и драгоценных металлах.</p>
+      <a href="#catalog" class="btn btn-primary">Исследовать коллекцию</a>
+    </div>
+  </header>
+
+  <!-- Каталог -->
+  <main class="container" id="catalog">
+    <div class="section-header">
+      <h2>Эксклюзивная коллекция</h2>
+      <p>Выберите часы, подчеркивающие ваш статус</p>
+    </div>
+
+    <!-- Фильтры и поиск -->
+    <div class="filters-bar">
+      <div class="search-box">
+        <i class="fa-solid fa-magnifying-glass"></i>
+        <input type="text" id="searchInput" placeholder="Поиск часов или бренда...">
+      </div>
+
+      <div class="filter-buttons">
+        <button class="filter-btn active" data-category="all">Все</button>
+        <button class="filter-btn" data-category="mechanic">Механика</button>
+        <button class="filter-btn" data-category="chronograph">Хронографы</button>
+        <button class="filter-btn" data-category="gold">Золото</button>
+      </div>
+
+      <select id="sortSelect" class="sort-select">
+        <option value="default">Сортировка по умолчанию</option>
+        <option value="low-high">Сначала дешевле</option>
+        <option value="high-low">Сначала дороже</option>
+        <option value="rating">По рейтингу</option>
+      </select>
+    </div>
+
+    <!-- Сетка товаров -->
+    <div class="product-grid" id="productGrid">
+      <!-- Товары рендерятся через JS -->
+    </div>
+  </main>
+
+  <!-- Раздел о бренде -->
+  <section class="about-section" id="about">
+    <div class="about-container">
+      <div class="about-text">
+        <h2>Мастерство вне времени</h2>
+        <p>С 1894 года AURA создает часовые шедевры для истинных ценителей. Мы сочетаем вековые traditions швейцарских часовщиков с футуристическим дизайном и передовыми материалами.</p>
+        <div class="stats-grid">
+          <div class="stat-item">
+            <h3>130+</h3>
+            <p>Лет истории</p>
+          </div>
+          <div class="stat-item">
+            <h3>100%</h3>
+            <p>Ручная сборка</p>
+          </div>
+          <div class="stat-item">
+            <h3>5 Лет</h3>
+            <p>Гарантии</p>
+          </div>
+        </div>
+      </div>
+      <div class="about-img">
+        <img src="https://images.unsplash.com/photo-1509042239860-f550ce710b93?auto=format&fit=crop&q=80&w=800" alt="Мастер часового дела">
+      </div>
+    </div>
+  </section>
+
+  <!-- Подвал (Footer) -->
+  <footer id="contact">
+    <div class="footer-container">
+      <div class="footer-col">
+        <div class="logo">AURA<span>.</span></div>
+        <p>Салон эксклюзивных швейцарских часов. Доставляем роскошь по всему миру.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Контакты</h4>
+        <p><i class="fa-solid fa-location-dot"></i> Москва, ул. Тверская, 12</p>
+        <p><i class="fa-solid fa-phone"></i> +7 (495) 000-88-99</p>
+        <p><i class="fa-solid fa-envelope"></i> vip@aura-watches.ru</p>
+      </div>
+      <div class="footer-col">
+        <h4>Социальные сети</h4>
+        <div class="social-links">
+          <a href="#"><i class="fa-brands fa-instagram"></i></a>
+          <a href="#"><i class="fa-brands fa-telegram"></i></a>
+          <a href="#"><i class="fa-brands fa-whatsapp"></i></a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      &copy; 2026 AURA Watches. Все права защищены.
+    </div>
+  </footer>
+
+  <!-- Панель корзины -->
+  <div class="cart-overlay" id="cartOverlay"></div>
+  <aside class="cart-sidebar" id="cartSidebar">
+    <div class="cart-header">
+      <h3>Ваша корзина</h3>
+      <button class="close-btn" id="closeCart">&times;</button>
+    </div>
+    <div class="cart-items" id="cartItems">
+      <!-- Товары корзины рендерятся через JS -->
+    </div>
+    <div class="cart-footer">
+      <div class="total-row">
+        <span>Итого:</span>
+        <span id="cartTotal" class="total-price">0 ₽</span>
+      </div>
+      <button class="btn btn-primary btn-block" id="checkoutBtn">Оформить заказ</button>
+    </div>
+  </aside>
+
+  <!-- Модальное окно Быстрого Просмотра -->
+  <div class="modal" id="productModal">
+    <div class="modal-overlay"></div>
+    <div class="modal-content">
+      <button class="modal-close">&times;</button>
+      <div class="modal-body" id="modalBody">
+        <!-- Контент модального окна -->
+      </div>
+    </div>
+  </div>
+
+  <!-- Модальное окно Заказа -->
+  <div class="modal" id="orderModal">
+    <div class="modal-overlay"></div>
+    <div class="modal-content order-form-modal">
+      <button class="modal-close" id="closeOrderModal">&times;</button>
+      <h3>Оформление заказа</h3>
+      <form id="orderForm">
+        <div class="form-group">
+          <label>Ваше имя</label>
+          <input type="text" required placeholder="Александр Иванов">
+        </div>
+        <div class="form-group">
+          <label>Телефон</label>
+          <input type="tel" required placeholder="+7 (999) 000-00-00">
+        </div>
+        <div class="form-group">
+          <label>Адрес доставки</label>
+          <textarea required placeholder="Город, улица, дом, квартира"></textarea>
+        </div>
+        <button type="submit" class="btn btn-primary btn-block">Подтвердить заказ</button>
+      </form>
+    </div>
+  </div>
+
+  <!-- Контейнер для уведомлений (Toasts) -->
+  <div class="toast-container" id="toastContainer"></div>
+
+  <!-- Скрипт -->
+  <script src="script.js"></script>
+</body>
+</html>
